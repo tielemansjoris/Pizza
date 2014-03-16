@@ -40,8 +40,8 @@
                                 <th>
                                     Pizza 
                                     <?php print $pizza->getProductnaam() ?>
-                                    <a href="winkelkar.php?action=voegtoe&productid=<?php print $pizza->getProductid() ?>">
-                                        <i class="icon-shopping-cart pull-right"></i></a>
+                                    <a class="btn btn-small form-inline pull-right" href="winkelkar.php?action=voegtoe&productid=<?php print $pizza->getProductid() ?>">Voeg toe</a>
+
                                 </th>
                                 <td>
                                     <?php print $pizza->getPrijs() . " €" ?>
@@ -93,11 +93,9 @@
                         <td>
                             <?php print ($result->getPrijs() . " €  "); ?>
                         </td>                    
-                        <td>
-                            <a href="winkelkar.php?action=verwijder&winkelkarid=
-                               <?php print($result->getWinkelkarid()); ?>">
-                                Verwijder</a>
-                        </td>
+                        <th>
+                            <a class="btn btn-small form-inline pull-right" href="winkelkar.php?action=verwijder&winkelkarid=<?php print($result->getWinkelkarid()); ?>">Verwijder</a>
+                        </th>
                     </tr>
                     <?php
                 }

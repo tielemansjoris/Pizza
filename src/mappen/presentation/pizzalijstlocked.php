@@ -32,7 +32,7 @@
                 ?>
                 <div class="row-fluid">
                     <div class="span12">                 
-                        <p class=" alert alert-error">Verkeerd wachtwoord!</p> <?php
+                        <p class=" alert alert-error">Gebruikersnaam of wachtwoord verkeerd!</p> <?php
                         }
                         ?>
                     </div>

@@ -21,9 +21,9 @@
             <h1>Winkelkar</h1>
             <table class="table table-striped table-bordered">
             <tr>
-                <th class ="span8">Titel</th>
+                <th class ="span9">Titel</th>
                 <th class ="span2">prijs</th>
-                <th class ="span2"></th> 
+                <th class ="span1"></th> 
             </tr>
             <?php
             foreach ($winkelkar as $result) {
@@ -35,12 +35,11 @@
                     </td>
                     <td>
                         <?php print ($result->getPrijs() . " €  "); ?>
-                    </td>                    
-                    <td>
-                        <a href="checkout.php?action=verwijder&winkelkarid=
-                           <?php print($result->getWinkelkarid()); ?>">
-                            Verwijder</a>
-                    </td>
+                    </td> 
+                    <th>
+                        <a class="btn btn-small form-inline pull-right" href="checkout.php?action=verwijder&winkelkarid=
+                           <?php print($result->getWinkelkarid()); ?>">Verwijder</a>
+                    </th>
                 </tr>
                 <?php
             }
