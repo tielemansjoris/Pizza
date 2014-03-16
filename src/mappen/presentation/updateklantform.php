@@ -82,7 +82,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Paswoord:</td>
+                                <td>Wachtwoord:</td>
                                 <td>
                                     <input type="text" name="wachtwoord" placeholder="nieuw wachtwoord" required>
                                 </td>
