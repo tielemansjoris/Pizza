@@ -107,8 +107,10 @@
                     <td colspan="2"> <?php print $totaal ." €" ?></td>                
                 </tr>
                 </table>
-                <a class="btn form-inline pull-right" href="checkout.php">Checkout</a>
-                <a class="btn form-inline pull-right" href="winkelkar.php?action=empty&klantid=<?php print $klant->getKlantid() ?>">Winkelkar leegmaken</a>
+                    <?php if (!empty($winkelkar)) { ?>
+                    <a class="btn form-inline pull-right" href="checkout.php">Checkout</a>
+                    <a class="btn form-inline pull-right" href="winkelkar.php?action=empty&klantid=<?php print $klant->getKlantid() ?>">Winkelkar leegmaken</a>
+                    <?php } ?>
                 </div>
             </div>
         </div>
