@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+.form-inline {
+	margin-bottom: 0;
+}
+#logo {
+	margin-bottom: 1em;
+}
+article li {
+	list-style-type: none;
+}
+.img1, .img2, .img3, .img4 {
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	margin-right: 1em;
+	margin-bottom: 1em;
+	float: left;
+	height: 100%;
+	width: 100%;
+}
+.img1 {
+	width: 55%;
+	padding-bottom: 100%;
+}
+.img2 {
+	width: 35%;
+	padding-bottom: 100%;
+}
+.img3 {
+	width: 35%;
+	padding-bottom: 52%;
+	margin-bottom: 0;
+}
+.img4 {
+	width: 55%;
+	padding-bottom: 52%;
+	margin-bottom: 0;
+}
+body {
+    padding-bottom: 2em;
+}
+header {
+    max-width: 100%;
+}
