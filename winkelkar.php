@@ -2,18 +2,22 @@
 
 session_start();
 
-require_once ("src/mappen/business/klantservice.class.php");
-require_once ("src/mappen/business/winkelkarservice.class.php");
-require_once ("src/mappen/business/productservice.class.php");
+require_once("Doctrine/Common/ClassLoader.php");
+
+use mappen\business\KlantService;
+use mappen\business\WinkelkarService;
+use Doctrine\Common\ClassLoader;
+
+$classLoader = new ClassLoader("mappen", "src");
+$classLoader->register();
+
 
 $email = $_SESSION["email"];
 $klant = KlantService::getByMail($email);
 
 if (isset($_GET["action"])){
     if ($_GET["action"] == "voegtoe"){
-        $product = ProductService::getByProductid($_GET["productid"]);
-        $aantal = 1;
-        WinkelkarService::addToWinkelkar($klant, $product, $aantal);
+        WinkelkarService::addToWinkelkar($klant->getKlantid(), $_GET["productid"]);
         header ("location: index.php");
         exit(0);
     }

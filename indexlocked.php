@@ -2,7 +2,15 @@
 
 session_start();
 
-require_once ("src/mappen/business/productservice.class.php");
+require_once("Doctrine/Common/ClassLoader.php");
+
+use mappen\business\GastenboekService;
+use mappen\business\ProductService;
+use Doctrine\Common\ClassLoader;
+
+$classLoader = new ClassLoader("mappen", "src");
+$classLoader->register();
+
 
 if (isset($_SESSION["aangemeld"])) {
     header("location: index.php");
@@ -19,6 +27,13 @@ if (isset($_SESSION["error"]) && $_SESSION["error"] == "verkeerdwachtwoord"){
     unset ($_SESSION["error"]);
 }
 
+if (isset($_GET["action"])){
+    if ($_GET["action"] == "toegevoegd"){
+        $toegevoegd = true;
+    }
+}
+
+$gastenboek = GastenboekService::getAll();
 $pizzalijst = ProductService::getAll();
 
 include ("src/mappen/presentation/pizzalijstlocked.php");

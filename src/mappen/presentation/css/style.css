@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Molle:400italic);
+
 
 .form-inline {
 	margin-bottom: 0;
@@ -41,6 +43,39 @@ article li {
 body {
     padding-bottom: 2em;
 }
-header {
-    max-width: 100%;
+.nw {
+    margin-left: .3em;
 }
+.left{
+    padding-left: 1.5em;
+}
+.h1font {
+    font-family: 'Molle', cursive;
+}
+/* Large desktop */
+@media (min-width: 1250px) {.container-fluid {
+    max-width: 1260px;
+    min-width: 1250px;
+    margin: 0 auto;
+}}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {.container-fluid {
+    max-width: 929px;
+    min-width: 728px;
+    margin: 0 auto;
+}}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {.container-fluid {
+    max-width: 727px;
+    min-width: 540px;
+    margin: 0 auto;
+}}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {.container-fluid {
+    max-width: 420px;
+    min-width: 360px;
+    margin: 0 auto;
+}}

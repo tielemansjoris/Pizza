@@ -2,11 +2,17 @@
 
 session_start();
 
-require_once("src/mappen/business/klantservice.class.php");
+require_once("Doctrine/Common/ClassLoader.php");
+
+use mappen\business\KlantService;
+use Doctrine\Common\ClassLoader;
+
+$classLoader = new ClassLoader("mappen", "src");
+$classLoader->register();
 
 if (isset($_GET["action"])){
     if ($_GET["action"] == "login") {
-            
+        
         $toegelaten = KlantService::controleerGebruiker($_POST["email"], $_POST["wachtwoord"]);        
 
         if ($toegelaten) {        
