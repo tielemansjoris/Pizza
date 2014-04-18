@@ -67,7 +67,7 @@
                 </div>
             </div>
         </div>
-
+        <p> Hallo werkt dit? </p>
         <div class="container-fluid">
             <div class="row-fluid">
                 <div class="span7">
